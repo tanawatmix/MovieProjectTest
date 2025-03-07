@@ -85,22 +85,31 @@ namespace MovieProjectTest
                         return newMovieId;
                     }
 
-                    // ดึง ID สูงสุด
-                    using (var cmd = new SqlCommand("SELECT TOP 1 movieId FROM movie_tb WITH (UPDLOCK) ORDER BY movieId DESC", conn))
+                    // ดึงรหัสสูงสุดจากตาราง
+                    using (var cmd = new SqlCommand("SELECT MAX(movieId) FROM movie_tb WITH (UPDLOCK)", conn))
                     {
                         var result = cmd.ExecuteScalar();
                         if (result != null && result != DBNull.Value && !string.IsNullOrEmpty(result.ToString()))
                         {
                             string lastMovieId = result.ToString().Trim();
-                            if (lastMovieId.StartsWith(prefix) && int.TryParse(lastMovieId.Substring(2), out int number))
+                            if (lastMovieId.StartsWith(prefix))
                             {
-                                newMovieId = $"{prefix}{++number:D3}";
+                                string numberPart = lastMovieId.Substring(2);
+                                if (int.TryParse(numberPart, out int number))
+                                {
+                                    newMovieId = $"{prefix}{++number:D3}";
+                                }
+                                else
+                                {
+                                    ShowWarningMsg($"ไม่สามารถแปลง '{numberPart}' เป็นตัวเลขได้");
+                                }
                             }
                             else
                             {
-                                ShowWarningMsg($"รูปแบบ ID '{lastMovieId}' ไม่ถูกต้อง");
+                                ShowWarningMsg($"รูปแบบ ID '{lastMovieId}' ไม่เริ่มต้นด้วย '{prefix}'");
                             }
                         }
+                        // หากไม่มีข้อมูลในตาราง หรือเกิดข้อผิดพลาดในการแปลง ให้ใช้ค่าเริ่มต้น mv001
                     }
                 }
             }
