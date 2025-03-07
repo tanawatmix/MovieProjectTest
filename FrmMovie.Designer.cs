@@ -99,6 +99,7 @@
             this.btExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // btCancel
             // 
@@ -244,6 +245,7 @@
             this.btSelectImg2.TabIndex = 24;
             this.btSelectImg2.Text = "...";
             this.btSelectImg2.UseVisualStyleBackColor = true;
+            this.btSelectImg2.Click += new System.EventHandler(this.btSelectImg2_Click);
             // 
             // btSelectImg1
             // 
@@ -254,6 +256,7 @@
             this.btSelectImg1.TabIndex = 23;
             this.btSelectImg1.Text = "...";
             this.btSelectImg1.UseVisualStyleBackColor = true;
+            this.btSelectImg1.Click += new System.EventHandler(this.btSelectImg1_Click);
             // 
             // pcbDirMovie
             // 
@@ -366,6 +369,7 @@
             this.tbMovieDVDPrice.Size = new System.Drawing.Size(193, 22);
             this.tbMovieDVDPrice.TabIndex = 17;
             this.tbMovieDVDPrice.Text = "0.00";
+            this.tbMovieDVDPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMovieDVDPrice_KeyPress);
             // 
             // label6
             // 
@@ -388,6 +392,11 @@
             // cbbMovieType
             // 
             this.cbbMovieType.FormattingEnabled = true;
+            this.cbbMovieType.Items.AddRange(new object[] {
+            "action",
+            "comedy",
+            "drama",
+            "superhero"});
             this.cbbMovieType.Location = new System.Drawing.Point(139, 268);
             this.cbbMovieType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbMovieType.Name = "cbbMovieType";
@@ -419,6 +428,7 @@
             this.tbMovieDVDTotal.Size = new System.Drawing.Size(43, 22);
             this.tbMovieDVDTotal.TabIndex = 14;
             this.tbMovieDVDTotal.Text = "0";
+            this.tbMovieDVDTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMovieDVDTotal_KeyPress);
             // 
             // nudMovieHour
             // 
@@ -493,6 +503,7 @@
             this.btMovieSearch.TabIndex = 22;
             this.btMovieSearch.Text = "ค้นหา";
             this.btMovieSearch.UseVisualStyleBackColor = true;
+            this.btMovieSearch.Click += new System.EventHandler(this.btMovieSearch_Click);
             // 
             // tbMovieSearch
             // 
@@ -512,12 +523,13 @@
             this.rdMovieName.TabIndex = 2;
             this.rdMovieName.Text = "ชื่อภาพยนต์";
             this.rdMovieName.UseVisualStyleBackColor = true;
+            this.rdMovieName.Click += new System.EventHandler(this.rdMovieName_Click);
             // 
             // rdMovieId
             // 
             this.rdMovieId.AutoSize = true;
             this.rdMovieId.Checked = true;
-            this.rdMovieId.Location = new System.Drawing.Point(25, 37);
+            this.rdMovieId.Location = new System.Drawing.Point(21, 36);
             this.rdMovieId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdMovieId.Name = "rdMovieId";
             this.rdMovieId.Size = new System.Drawing.Size(89, 20);
@@ -525,6 +537,7 @@
             this.rdMovieId.TabStop = true;
             this.rdMovieId.Text = "รหัสภาพยนต์";
             this.rdMovieId.UseVisualStyleBackColor = true;
+            this.rdMovieId.Click += new System.EventHandler(this.rdMovieId_Click);
             // 
             // lsMovieShow
             // 
@@ -542,6 +555,7 @@
             this.lsMovieShow.TabIndex = 0;
             this.lsMovieShow.UseCompatibleStateImageBehavior = false;
             this.lsMovieShow.View = System.Windows.Forms.View.Details;
+            this.lsMovieShow.SelectedIndexChanged += new System.EventHandler(this.lsMovieShow_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -630,10 +644,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMovieShowAll);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMovie";
             this.Text = "จัดการข้อมูลภาพยนต์";
-            this.Load += new System.EventHandler(this.FrmMovie_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbDirMovie)).EndInit();
