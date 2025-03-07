@@ -8,3 +8,13 @@ C:\nin_th_mo\MovieProjectTest\MovieProjectTest\obj\Debug\MovieProjectTest.csproj
 C:\nin_th_mo\MovieProjectTest\MovieProjectTest\obj\Debug\MovieProjectTest.csproj.CoreCompileInputs.cache
 C:\nin_th_mo\MovieProjectTest\MovieProjectTest\obj\Debug\MovieProjectTest.exe
 C:\nin_th_mo\MovieProjectTest\MovieProjectTest\obj\Debug\MovieProjectTest.pdb
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\bin\Debug\MovieProjectTest.exe.config
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\bin\Debug\MovieProjectTest.exe
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\bin\Debug\MovieProjectTest.pdb
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.csproj.AssemblyReference.cache
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.FrmMovie.resources
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.Properties.Resources.resources
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.csproj.GenerateResource.cache
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.csproj.CoreCompileInputs.cache
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.exe
+C:\Users\ooDol\OneDrive\เดสก์ท็อป\MyCsProject\MovieProjectTest\obj\Debug\MovieProjectTest.pdb
