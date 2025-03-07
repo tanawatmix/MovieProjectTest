@@ -112,6 +112,7 @@
             this.btCancel.Text = "ยกเลิก";
             this.btCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btSaveAddEdit
             // 
@@ -125,6 +126,7 @@
             this.btSaveAddEdit.Text = "บันทึก";
             this.btSaveAddEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btSaveAddEdit.UseVisualStyleBackColor = true;
+            this.btSaveAddEdit.Click += new System.EventHandler(this.btSaveAddEdit_Click);
             // 
             // btDel
             // 
@@ -138,6 +140,7 @@
             this.btDel.Text = "ลบ";
             this.btDel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btDel.UseVisualStyleBackColor = true;
+            this.btDel.Click += new System.EventHandler(this.btDel_Click);
             // 
             // btEdit
             // 
@@ -151,6 +154,7 @@
             this.btEdit.Text = "แก้ไข";
             this.btEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btAdd
             // 
@@ -629,6 +633,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMovie";
             this.Text = "จัดการข้อมูลภาพยนต์";
+            this.Load += new System.EventHandler(this.FrmMovie_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbDirMovie)).EndInit();
